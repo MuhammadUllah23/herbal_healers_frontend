@@ -1,4 +1,5 @@
 class Remedy {
+    static container = document.getElementById("remedies-cont")
     constructor({name, benefits, ingredients, steps, id, illness, illness_id}){
         this.name = name
         this. benefits = benefits
@@ -13,7 +14,7 @@ class Remedy {
     }
 
     displayInfo(){
-        return this.element.innerHTML = `
+        this.element.innerHTML = `
         <div id="remedy-${this.id}">
         <h3 class="name">${this.name}</h3>
         <p class="benfits">${this.benefits}</p>
@@ -21,9 +22,10 @@ class Remedy {
         <p class="steps">${this.steps}</p>
         </div>
         `
+        return this.element
     }
 
     attachToDom() {
-        
+        Remedy.container.appendChild(this.displayInfo())
     }
 }
