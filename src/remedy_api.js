@@ -9,9 +9,10 @@ class RemedyApi {
         .then(r => r.json())
         .then(remedies => {
             for(const remedy of remedies){
-                debugger
+                let x = new Remedy(remedy)
             }
         })
+        .catch()
     }
 }
  
