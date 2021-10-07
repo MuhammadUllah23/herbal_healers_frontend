@@ -7,5 +7,8 @@ class Remedy {
         this.id = id
         this.illness = illness
         this.illness_id = illness_id
+        this.element = document.createElement('li');
+        this.element.id = `remedy-${id}`
+        debugger
     }
 }
