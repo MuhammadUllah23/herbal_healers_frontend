@@ -10,6 +10,7 @@ class RemedyApi {
         .then(remedies => {
             for(const remedy of remedies){
                 let x = new Remedy(remedy)
+                x.attachToDom()
             }
         })
         .catch()

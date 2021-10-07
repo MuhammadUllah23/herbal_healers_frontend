@@ -22,4 +22,8 @@ class Remedy {
         </div>
         `
     }
+
+    attachToDom() {
+        
+    }
 }
