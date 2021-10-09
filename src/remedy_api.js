@@ -19,11 +19,11 @@ class RemedyApi {
     createRemedies(){
         const remedyInfo = {
             remedy: {
-                name:,
-                benefits:,
-                ingredients:,
-                steps:,
-                illness_id
+                name: nameValue.value,
+                benefits: benefitsValue.value,
+                ingredients: ingredientsValue.value,
+                steps: stepsValue.value,
+                illness_id: illnessIdValue.value
             }
         }
 
