@@ -17,7 +17,16 @@ class RemedyApi {
     }
 
     createRemedies(){
-    
+        const remedyInfo = {
+            remedy: {
+                name:,
+                benefits:,
+                ingredients:,
+                steps:,
+                illness_id
+            }
+        }
+
         fetch(this.port + `/remedies`)
         .then(r = r.json())
         .then(data => console.log(data)) 
