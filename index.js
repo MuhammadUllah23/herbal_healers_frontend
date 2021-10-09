@@ -7,9 +7,9 @@ const dropDown = document.getElementById("illness-dropdown");
 
 remedyApiCall.getRemedies()
 
-form.addEventListener('submit' handleSubmit)
+form.addEventListener('submit', handleSubmit)
 
 function handleSubmit(e){
-    e.preventDefault()
-    
+    e.preventDefault();
+    remedyApiCall.createRemedies()
 }

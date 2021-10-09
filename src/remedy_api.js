@@ -15,5 +15,14 @@ class RemedyApi {
         })
         .catch()
     }
+
+    createRemedies(){
+    
+        fetch(this.port + `/remedies`)
+        .then(r = r.json())
+        .then(data => console.log(data)) 
+    }
+        
+    
 }
  
