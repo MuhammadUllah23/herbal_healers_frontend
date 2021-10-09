@@ -7,8 +7,8 @@ class RemedyApi {
         fetch(this.port + `/remedies`) 
         //this.port = remedyApiCall = `http://localhost:3000`
         .then(r => r.json())
-        .then(remedies => {
-            for(const remedy of remedies){
+        .then(remedydata => {
+            for(const remedy of remedydata){
                 let x = new Remedy(remedy)
                 x.attachToDom()
             }
