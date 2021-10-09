@@ -3,12 +3,12 @@ class IllnessApi {
         this.port = port
     }
 
-    // getIllnesses(){
-    //     fetch(this.port + `/illnesses`)
-    //     .then(r => r.json())
-    //     .then( illnessdata => {
-    //         debugger
-    //     })
-    //     .catch()
-    // }
+    getIllnesses(){
+        fetch(this.port + `/illnesses`)
+        .then(r => r.json())
+        .then( illnessdata => {
+            debugger
+        })
+        .catch()
+    }
 }
