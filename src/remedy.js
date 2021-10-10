@@ -38,6 +38,8 @@ class Remedy {
             console.log(e.target)
         }else if(e.target.innerText === "Save Remedy"){
             console.log(e.target)
+            e.target.innerText === "Edit Remedy"
+            this.updateRemedy()
         }     
     }
 
@@ -48,8 +50,11 @@ class Remedy {
             let name = element.classList[0];
             element.outerHTML = `<input type="textarea" class="edit-${name}" value=${inputValue}"`
             // debugger
-        }
-        
+        }    
+    }
+
+    updateRemedy(){
+        debugger
     }
 
     attachToDom() {
