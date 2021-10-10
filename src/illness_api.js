@@ -7,7 +7,10 @@ class IllnessApi {
         fetch(this.port + `/illnesses`)
         .then(r => r.json())
         .then( illnessdata => {
-            debugger
+            for(const illness of illnessdata){
+                let x = new Illness(illness)
+                x.attachToDom()
+            }
         })
         .catch()
     }
