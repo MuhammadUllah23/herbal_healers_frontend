@@ -31,8 +31,9 @@ class Remedy {
 
     handleClick = (e) => {
         if(e.target.innerText === "Edit Remedy"){
-            console.log(e.target)
-            this.createEditForm
+            e.target.innerText = "Save Remedy"
+            this.createEditForm()
+
         }else if(e.target.innerText === "Delete Remedy"){
             console.log(e.target)
         }else if(e.target.innerText === "Save Remedy"){
@@ -41,7 +42,14 @@ class Remedy {
     }
 
     createEditForm(){
-
+        const remedy = this.element.querySelector("div")
+        for(const element of remedy.children){
+            let inputValue = element.innerText
+            let name = element.classList[0];
+            element.outerHTML = `<input type="textarea" class="edit-${name}" value=${inputValue}"`
+            // debugger
+        }
+        
     }
 
     attachToDom() {
