@@ -6,4 +6,8 @@ class Illness {
         this.id = id
         this.remedies = remedies
     }
+
+    addToDropDown(){
+        
+    }
 }
