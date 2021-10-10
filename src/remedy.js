@@ -10,7 +10,7 @@ class Remedy {
         this.illness_id = illness_id
         this.element = document.createElement('li');
         this.element.id = `remedy-${id}` 
-        this/this.element.addEventListener('click', this.handle)
+        this/this.element.addEventListener('click', this.handleClick);
         // debugger
     }
 
@@ -28,12 +28,19 @@ class Remedy {
         return this.element
     }
 
-    handleClick(e){
+    handleClick = (e) => {
         if(e.target.innerText === "Edit Remedy"){
-
+            console.log(e.target)
+            this.createEditForm
         }else if(e.target.innerText === "Delete Remedy"){
+            console.log(e.target)
+        }else if(e.target.innerText === "Save Remedy"){
+            console.log(e.target)
+        }     
+    }
 
-        }else if(e.target.innerText === "Save Remedy")
+    createEditForm(){
+        
     }
 
     attachToDom() {
