@@ -21,9 +21,10 @@ class Remedy {
         <p class="remedy-benfits">${this.benefits}</p>
         <p class="remedy-ingredients">${this.ingredients}</p>
         <p class="remedy-steps">${this.steps}</p>
+        </div>
         <button class="edit">Edit Remedy</button>
         <button class="delete">Delete Remedy</button>  
-        </div>
+        
         `
         return this.element
     }
@@ -40,7 +41,7 @@ class Remedy {
     }
 
     createEditForm(){
-        
+
     }
 
     attachToDom() {
