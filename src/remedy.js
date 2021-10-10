@@ -10,6 +10,7 @@ class Remedy {
         this.illness_id = illness_id
         this.element = document.createElement('li');
         this.element.id = `remedy-${id}` 
+        this/this.element.addEventListener('click', this.handle)
         // debugger
     }
 
@@ -25,6 +26,14 @@ class Remedy {
         </div>
         `
         return this.element
+    }
+
+    handleClick(e){
+        if(e.target.innerText === "Edit Remedy"){
+
+        }else if(e.target.innerText === "Delete Remedy"){
+
+        }else if(e.target.innerText === "Save Remedy")
     }
 
     attachToDom() {
