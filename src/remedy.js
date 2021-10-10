@@ -16,10 +16,12 @@ class Remedy {
     displayInfo(){
         this.element.innerHTML = `
         <div id="remedy-${this.id}">
-        <h3 class="name">${this.name}</h3>
-        <p class="benfits">${this.benefits}</p>
-        <p class="ingredients">${this.ingredients}</p>
-        <p class="steps">${this.steps}</p>
+        <h3 class="remedy-name">${this.name}</h3>
+        <p class="remedy-benfits">${this.benefits}</p>
+        <p class="remedy-ingredients">${this.ingredients}</p>
+        <p class="remedy-steps">${this.steps}</p>
+        <button class="edit">Edit Remedy</button>
+        <button class="delete">Delete Remedy</button>  
         </div>
         `
         return this.element
