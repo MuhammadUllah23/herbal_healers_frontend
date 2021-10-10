@@ -1,6 +1,6 @@
 class Illness {
     constructor({name, symptoms, id, remedies}) {
-        debugger
+        // debugger
         this.name = name
         this.symptoms = symptoms
         this.id = id
@@ -8,6 +8,9 @@ class Illness {
     }
 
     addToDropDown(){
-        
+        const option = document.createElement('option');
+        option.value = this.id
+        option.innerText = this.name
+        dropDown.appendChild(option)
     }
 }

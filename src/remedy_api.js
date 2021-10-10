@@ -26,9 +26,17 @@ class RemedyApi {
                 illness_id: illnessIdValue.value
             }
         }
+        const configObject = {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+            },
+            body: JSON.stringify(remedyInfo) 
+        } 
 
-        fetch(this.port + `/remedies`)
-        .then(r = r.json())
+        fetch(this.port + `/remedies`, configObject)
+        .then(r => r.json())
         .then(data => console.log(data)) 
     }
         

@@ -9,7 +9,7 @@ class IllnessApi {
         .then( illnessdata => {
             for(const illness of illnessdata){
                 let x = new Illness(illness)
-                x.attachToDom()
+                x.addToDropDown()
             }
         })
         .catch()
