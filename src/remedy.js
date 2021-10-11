@@ -10,7 +10,7 @@ class Remedy {
         this.illness_id = illness_id
         this.element = document.createElement('li');
         this.element.id = `remedy-${id}` 
-        this/this.element.addEventListener('click', this.handleClick);
+        this.element.addEventListener('click', this.handleClick);
         // debugger
     }
 

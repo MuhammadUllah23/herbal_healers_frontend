@@ -41,6 +41,7 @@ class RemedyApi {
             const remedy = new Remedy(data)
             remedy.attachToDom()
         }) 
+        .catch()
     }
 
     updateRemedy(remedy){
@@ -61,6 +62,7 @@ class RemedyApi {
         } 
         fetch(this.port + `/remedies/${id}`, configObject)
         .then(remedy.displayInfo())
+        .catch()
         // debugger
     }
         
