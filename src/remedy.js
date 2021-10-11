@@ -66,7 +66,8 @@ class Remedy {
         this.benefits = this.element.querySelector(".edit-remedy-benefits").value;
         this.ingredients = this.element.querySelector(".edit-remedy-ingredients").value;
         this.steps = this.element.querySelector(".edit-remedy-steps").value;
-        debugger
+        remedyApiCall.updateRemedy()
+        // debugger
     }
 
     attachToDom() {

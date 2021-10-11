@@ -42,6 +42,10 @@ class RemedyApi {
             remedy.attachToDom()
         }) 
     }
+
+    updateRemedy(){
+        debugger
+    }
         
     
 }
