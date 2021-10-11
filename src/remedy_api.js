@@ -51,6 +51,14 @@ class RemedyApi {
             ingredients,
             steps
         }
+        const configObject = {
+            method: 'PATCH',
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+            },
+            body: JSON.stringify(remedyInfo) 
+        } 
         debugger
     }
         
