@@ -18,4 +18,5 @@ form.addEventListener('submit', handleSubmit)
 function handleSubmit(e){
     e.preventDefault();
     remedyApiCall.createRemedies()
+    e.target.reset();
 }
