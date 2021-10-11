@@ -18,7 +18,7 @@ class Remedy {
         this.element.innerHTML = `
         <div id="remedy-${this.id}">
         <h3 class="remedy-name">${this.name}</h3>
-        <p class="remedy-benfits">${this.benefits}</p>
+        <p class="remedy-benefits">${this.benefits}</p>
         <p class="remedy-ingredients">${this.ingredients}</p>
         <p class="remedy-steps">${this.steps}</p>
         </div>
@@ -37,14 +37,15 @@ class Remedy {
         }else if(e.target.innerText === "Delete Remedy"){
             console.log(e.target)
         }else if(e.target.innerText === "Save Remedy"){
-            console.log(e.target)
+            // console.log(e.target)
             e.target.innerText === "Edit Remedy"
-            this.updateRemedy()
+            this.updateRemedyData()
         }     
     }
 
     createEditForm(){
         const remedy = this.element.querySelector("div");
+        // debugger
         for(const element of remedy.children){
             let inputValue = element.innerText;
             let name = element.classList[0];
@@ -55,11 +56,16 @@ class Remedy {
                element.outerHTML = `<input type="text" class="edit-${name}" value="${inputValue}" />`
             
            }
-            // debugger
+            
         }    
     }
 
     updateRemedyData(){
+        // debugger
+        this.name = this.element.querySelector(".edit-remedy-name").value;
+        this.benefits = this.element.querySelector(".edit-remedy-benefits").value;
+        this.ingredients = this.element.querySelector(".edit-remedy-ingredients").value;
+        this.steps = this.element.querySelector(".edit-remedy-steps").value;
         debugger
     }
 
