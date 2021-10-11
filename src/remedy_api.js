@@ -38,8 +38,9 @@ class RemedyApi {
         fetch(this.port + `/remedies`, configObject)
         .then(r => r.json())
         .then(data => {
-            const remedy = Remedy.new(data)
+            const remedy = new Remedy(data)
             remedy.attachToDom()
+            remedy.displayInfo()
         }) 
     }
 

@@ -18,6 +18,7 @@ class Remedy {
         this.element.innerHTML = `
         <div id="remedy-${this.id}">
         <h3 class="remedy-name">${this.name}</h3>
+        <p class="remedy-illness">${this.illness.name}</p>
         <p class="remedy-benefits">${this.benefits}</p>
         <p class="remedy-ingredients">${this.ingredients}</p>
         <p class="remedy-steps">${this.steps}</p>
