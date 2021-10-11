@@ -55,7 +55,7 @@ class Remedy {
             let name = element.classList[0];
             // debugger
            if (element.tagName === "P"){
-            element.outerHTML = `<input type="textarea" class="edit-${name}" value="${inputValue}" />`
+            element.outerHTML = `<textarea class="edit-${name}"  rows="10" cols="70">${inputValue}</textarea>`
            } else if (element.tagName === "H2"){
                element.outerHTML = `<input type="text" class="edit-${name}" value="${inputValue}" />`
             
