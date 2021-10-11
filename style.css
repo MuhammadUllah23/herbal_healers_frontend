@@ -10,3 +10,9 @@ body {
     max-width: 960px;
     padding: 2.25%; /* 18px / 800px */
     width: 85%;
+}
+
+.textarea {
+    width: 500px;
+    height: 100px;
+  }

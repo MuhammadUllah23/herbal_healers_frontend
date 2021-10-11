@@ -40,7 +40,6 @@ class RemedyApi {
         .then(data => {
             const remedy = new Remedy(data)
             remedy.attachToDom()
-            remedy.displayInfo()
         }) 
     }
 

@@ -17,10 +17,13 @@ class Remedy {
     displayInfo(){
         this.element.innerHTML = `
         <div id="remedy-${this.id}">
-        <h3 class="remedy-name">${this.name}</h3>
-        <p class="remedy-illness">${this.illness.name}</p>
+        <h2 class="remedy-name">${this.name}</h2>
+        <h3 class="remedy-illness">${this.illness.name}</h3>
+        <h3>Benefits</h3>
         <p class="remedy-benefits">${this.benefits}</p>
+        <h3>Ingredients</h3>
         <p class="remedy-ingredients">${this.ingredients}</p>
+        <h3>Steps</h3>
         <p class="remedy-steps">${this.steps}</p>
         </div>
         <button class="edit">Edit Remedy</button>
@@ -53,7 +56,7 @@ class Remedy {
             // debugger
            if (element.tagName === "P"){
             element.outerHTML = `<input type="textarea" class="edit-${name}" value="${inputValue}" />`
-           } else {
+           } else if (element.tagName === "H2"){
                element.outerHTML = `<input type="text" class="edit-${name}" value="${inputValue}" />`
             
            }
