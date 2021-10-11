@@ -43,7 +43,14 @@ class RemedyApi {
         }) 
     }
 
-    updateRemedy(){
+    updateRemedy(remedy){
+        const {name, benefits, ingredients, steps} = remedy
+        const remedyInfo = {
+            name,
+            benefits,
+            ingredients,
+            steps
+        }
         debugger
     }
         
