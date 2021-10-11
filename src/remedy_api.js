@@ -44,7 +44,7 @@ class RemedyApi {
     }
 
     updateRemedy(remedy){
-        const {name, benefits, ingredients, steps} = remedy
+        const {name, benefits, ingredients, steps, id} = remedy
         const remedyInfo = {
             name,
             benefits,
@@ -59,6 +59,12 @@ class RemedyApi {
             },
             body: JSON.stringify(remedyInfo) 
         } 
+        fetch(this.port + `/remedies/${id}`, configObject)
+        .then(r => r.json())
+        .then(data => {
+            const remedy = Remedy.new(data)
+            remedy.attachToDom()
+        }) 
         debugger
     }
         
