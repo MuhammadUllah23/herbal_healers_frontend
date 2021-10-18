@@ -17,6 +17,7 @@ class RemedyApi {
     }
 
     createRemedies(){
+        
         const remedyInfo = {
             remedy: {
                 name: nameValue.value,
@@ -26,6 +27,7 @@ class RemedyApi {
                 illness_id: illnessIdValue.value
             }
         }
+        // debugger
         const configObject = {
             method: 'POST',
             headers: {
@@ -38,8 +40,13 @@ class RemedyApi {
         fetch(this.port + `/remedies`, configObject)
         .then(r => r.json())
         .then(data => {
-            const remedy = new Remedy(data)
-            remedy.attachToDom()
+            if (data.message){
+                alert(data.message)
+            } else{
+                const remedy = new Remedy(data)
+                remedy.attachToDom()
+            }
+            
         }) 
         .catch()
     }
@@ -67,16 +74,7 @@ class RemedyApi {
     }
 
     
-    deleteRemedy(e){
-        // debugger
-        const id = e.target.dataset.id
-        e.target.parentElement.remove()
-        // debugger
-        fetch(`${this.port}/remedies/${id}`, {method: 'DELETE'})
-        .then(r => r.json())
-        .then(json => alert(json.message))
-    }
-        
+
     
 }
  

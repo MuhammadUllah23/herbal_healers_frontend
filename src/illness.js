@@ -1,4 +1,5 @@
 class Illness {
+    
     constructor({name, symptoms, id, remedies}) {
         // debugger
         this.name = name
@@ -12,5 +13,8 @@ class Illness {
         option.value = this.id
         option.innerText = this.name
         dropDown.appendChild(option)
+        
     }
+
+    
 }

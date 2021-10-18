@@ -9,6 +9,8 @@ const benefitsValue = document.getElementById("remedy-benefits");
 const ingredientsValue = document.getElementById("remedy-ingredients");
 const stepsValue = document.getElementById("remedy-steps");
 const illnessIdValue = document.getElementById("illness-dropdown");
+const illnessFilter = document.getElementById("filter-options");
+
 
 remedyApiCall.getRemedies()
 IllnessApiCall.getIllnesses()
@@ -16,7 +18,9 @@ IllnessApiCall.getIllnesses()
 form.addEventListener('submit', handleSubmit)
 
 function handleSubmit(e){
+    // debugger
     e.preventDefault();
     remedyApiCall.createRemedies()
     e.target.reset();
 }
+
