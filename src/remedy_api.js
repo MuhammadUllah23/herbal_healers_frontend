@@ -65,6 +65,17 @@ class RemedyApi {
         .catch()
         // debugger
     }
+
+    
+    deleteRemedy(e){
+        // debugger
+        const id = e.target.dataset.id
+        e.target.parentElement.remove()
+        // debugger
+        fetch(`${this.port}/remedies/${id}`, {method: 'DELETE'})
+        .then(r => r.json())
+        .then(json => alert(json.message))
+    }
         
     
 }

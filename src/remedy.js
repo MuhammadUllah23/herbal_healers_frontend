@@ -15,6 +15,7 @@ class Remedy {
     }
 
     displayInfo(){
+        debugger
         this.element.innerHTML = `
         <div id="remedy-${this.id}">
         <h2 class="remedy-name">${this.name}</h2>
@@ -26,8 +27,8 @@ class Remedy {
         <h3>Steps</h3>
         <p class="remedy-steps">${this.steps}</p>
         </div>
-        <button class="edit">Edit Remedy</button>
-        <button class="delete">Delete Remedy</button>  
+        <button class="edit" data-id=${this.id}>Edit Remedy</button>
+        <button class="delete" data-id=${this.id}>Delete Remedy</button>  
         
         `
         return this.element
@@ -39,7 +40,8 @@ class Remedy {
             this.createEditForm()
 
         }else if(e.target.innerText === "Delete Remedy"){
-            console.log(e.target)
+            // console.log(e.target)
+            remedyApiCall.deleteRemedy(e)
         }else if(e.target.innerText === "Save Remedy"){
             // console.log(e.target)
             e.target.innerText === "Edit Remedy"
