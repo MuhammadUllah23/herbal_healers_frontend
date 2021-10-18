@@ -1,6 +1,6 @@
 class Remedy {
     static container = document.getElementById("remedies-cont")
-    static all = [];
+   
     constructor({name, benefits, ingredients, steps, id, illness, illness_id}){
         // debugger
         this.name = name
@@ -13,7 +13,7 @@ class Remedy {
         this.element = document.createElement('li');
         this.element.id = `remedy-${id}` 
         this.element.addEventListener('click', this.handleClick);
-        Remedy.all.push(this)
+        
         // debugger
     }
 

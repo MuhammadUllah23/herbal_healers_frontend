@@ -53,12 +53,14 @@ class RemedyApi {
 
     updateRemedy(remedy){
         const {name, benefits, ingredients, steps, id} = remedy
+        
         const remedyInfo = {
             name,
             benefits,
             ingredients,
             steps
         }
+        // debugger
         const configObject = {
             method: 'PATCH',
             headers: {
